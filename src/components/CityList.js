@@ -5,13 +5,18 @@ import { changeCoords } from "../redux/WeatherSlice";
 export const CityList = () => {
   const dispatch = useDispatch();
 
+  const handleChange = (event) => {
+    var value = event.target.value.split(',');
+    dispatch(changeCoords(value));
+  }
+
   return (
     <div className={`dropdownSection`}>
       <div className={`dropdownWrapper`}>
         <select
           className={`cityDropdown`}
           onChange={(event) => {
-            dispatch(changeCoords(event.target.value))
+            handleChange(event)
           }}
         >
           {cities.map((city) => {

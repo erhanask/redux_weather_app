@@ -17,7 +17,7 @@ export const WeatherSlice = createSlice({
   initialState: {
     items: {},
     status: "idle",
-    coords: ['41.015137','28.979530']
+    coords: ['37.000000','35.3213']
   },
   reducers: {
     changeCoords: (state, action) => {

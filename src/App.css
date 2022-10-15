@@ -41,9 +41,26 @@ body{
 .daysList li {
   padding: 10px;
   border-radius: 5px;
+  background-color: #97d4ff;
+}
+
+.daysList li img{
+  width: 60px;
 }
 
 .activeDay {
   border: 1px solid #d10000;;
   padding: 10px;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+  .daysList {
+    flex-direction: column;
+  }
+
+  .daysList li {
+    margin: 10px 0px;
+  }
 }
