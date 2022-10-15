@@ -1,3 +1,8 @@
+body{
+  height: 100vh;
+  background: linear-gradient(180deg, rgba(102,153,181,1) 15%, rgba(149,149,149,1) 40%, rgba(158,121,121,1) 66%, rgba(161,81,81,1) 90%);
+}
+
 .app {
   max-width: 750px;
   margin-left: auto;
@@ -10,8 +15,9 @@
   width: 100%;
 }
 .dropdownSection .dropdownWrapper {
-  background-color: #777777;
+  background-color: #811515;
   padding: 10px;
+  border-radius: 5px;
 }
 .dropdownSection .dropdownWrapper .cityDropdown {
   font-size: 16px;
@@ -34,9 +40,10 @@
 
 .daysList li {
   padding: 10px;
+  border-radius: 5px;
 }
 
 .activeDay {
-  border: 1px solid gray;
+  border: 1px solid #d10000;;
   padding: 10px;
 }

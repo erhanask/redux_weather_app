@@ -1,6 +1,26 @@
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchWeatherData } from "../redux/WeatherSlice";
 
 export const Content = () => {
 
+    const dispatch = useDispatch();
+    const items = useSelector(state => state.weather.items)
+    const status = useSelector(state => state.weather.status)
+    const coords = useSelector(state => state.weather.coords);
+
+
+
+    useEffect(() => {
+        if (status === 'idle') 
+            dispatch(fetchWeatherData(['41.015137','28.979530']));
+    },[status,dispatch])
+
+    useEffect(() => {
+        dispatch(fetchWeatherData(coords))
+    },[coords,dispatch])
+
+    console.log(items);
     return (
         <div className={`daysListWrapper`}>
             <ul className={`daysList`}>
